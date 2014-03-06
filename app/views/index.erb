@@ -1,0 +1,13 @@
+<div class="container">
+  <ul>
+    <% if !session[:user_id] %>
+    <li><a id='login-link' href="/login">Login</a></li>
+    <div id='append-login'></div>
+    <li><a id='sign-up-link' href="/sign_up">Sign Up</a></li>
+    <div id='append-signup'></div>
+    <div id='ajax-message'></div>
+    <% else %>
+    <li><a href='/logout'>Logout</a></li>
+    <% end %>
+  </ul>
+</div>

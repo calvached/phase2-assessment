@@ -1,0 +1,16 @@
+<div class='container'>
+  <h3>Edit Event Info:</h3>
+    <form id='edit-event-form' action='/event/<%= @event.id %>/edit' method='post'>
+      <label>Event Name: </label>
+      <input type='text' placeholder='Event Name' name='name' value='<%= @event.name %>'><br>
+      <label>Event Location: </label>
+      <input type='text' placeholder='Event Location' name='location' value='<%= @event.location %>'><br>
+      <label>Starts On: </label>
+      <input type='date' name='starts_at' value='<%= @event.starts_at %>'>
+      <label>Ends On: </label>
+      <input type='date' name='ends_at' value='<%= @event.ends_at %>'>
+      <input type='submit' name='Create Event'>
+    </form>
+    <a href="/event/<%= @event.id %>/destroy">Delete Event?</a>
+    <a href="/all_events">Cancel</a>
+</div>

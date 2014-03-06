@@ -1,0 +1,15 @@
+<div class='container'>
+  <ul>
+    <li><a id='create-event-link' href="/create_event">Create an Event</a></li>
+    <li><a href="/logout">Logout</a></li>
+  </ul>
+  <div id='append-create-event'></div>
+  <h3>All Events: </h3>
+  <div id='all-events-list'>
+    <ul>
+      <% @events.each do |event| %>
+        <li><a href='/event/<%= event.id %>/edit'><%= event.name %></a></li>
+      <% end %>
+    </ul>
+  </div>
+</div>
